@@ -2,474 +2,960 @@
 
 ## 1. Project Overview
 
-The **Customer Support Ticket Management System** is a Python-based console application designed to manage customer support requests efficiently.
+The **Customer Support Ticket Management System** is a Python-based console application designed to help companies manage customer support requests efficiently.
 
-The system allows users to manage customers, support agents, and support tickets. It provides features for creating, searching, updating, assigning, resolving, and closing tickets while maintaining data using JSON files.
+The system allows users to:
 
-The project demonstrates important Python programming concepts such as **Object-Oriented Programming, file handling, validation, exception handling, data structures, functions, and modular programming**.
+* Manage customer information
+* Manage support agents
+* Create and manage support tickets
+* Automatically assign tickets to suitable support agents
+* Track ticket status and priority
+* Add resolutions and close tickets
+* Maintain ticket history
+* Generate useful ticket reports
+* Store data permanently using JSON files
+* Validate user input and handle errors safely
 
 ---
 
 ## 2. Problem Statement
 
-Companies receive multiple customer support requests that need to be recorded, prioritized, assigned, tracked, and resolved.
+Companies receive multiple technical and customer-related support requests every day. Managing these requests manually can make it difficult to track customer information, assign support agents, monitor ticket progress, and maintain resolution records.
 
-Managing these requests manually can make it difficult to track ticket status, assigned support agents, customer information, and resolutions.
+This project provides a simple console-based solution to organize customer support operations.
 
-This project provides a simple console-based system to organize and manage customer support tickets.
+The system helps users:
+
+* Record customer details
+* Create support tickets
+* Prioritize tickets
+* Automatically assign tickets
+* Update ticket status
+* Record resolutions
+* Close completed tickets
+* Track ticket history
+* Generate support reports
+* Maintain data using JSON file storage
 
 ---
 
-## 3. Objectives
+## 3. Project Objectives
 
 The main objectives of this project are:
 
-- Manage customer information.
-- Manage support agent information.
-- Create and manage support tickets.
-- Automatically assign tickets to suitable support agents.
-- Track ticket priority and status.
-- Record ticket resolutions.
-- Maintain ticket history.
-- Generate useful ticket reports.
-- Validate user input.
-- Handle file-related exceptions.
-- Store data permanently using JSON files.
+1. To develop a Python-based customer support management system.
+2. To implement customer and support-agent management.
+3. To create and manage support tickets.
+4. To automatically assign tickets based on category and agent specialization.
+5. To implement ticket priority and status management.
+6. To maintain ticket history for tracking changes.
+7. To validate user input and prevent invalid data.
+8. To implement exception handling for reliable application execution.
+9. To store customer, agent, and ticket information using JSON files.
+10. To generate useful reports for support management.
 
 ---
 
-## 4. Key Features
+## 4. Features
 
-### Customer Management
+### 4.1 Customer Management
 
-- Add Customer
-- View Customers
-- Search Customers
-- Update Customer
-- Validate customer name, email, and mobile number
-- Prevent duplicate email and mobile numbers
+The system provides the following customer operations:
 
-### Support Agent Management
+* Add Customer
+* View Customers
+* Search Customer
+* Update Customer
+* Validate customer name
+* Validate email address
+* Validate mobile number
+* Prevent duplicate email addresses
+* Prevent duplicate mobile numbers
+* Store customer information in JSON
 
-- Add Support Agent
-- View Support Agents
-- Search Support Agent
-- Update Support Agent
-- Remove Support Agent
-- Validate agent details
-- Manage agent specialization and availability
+### 4.2 Support Agent Management
 
-### Ticket Management
+The system provides the following support-agent operations:
 
-- Create Ticket
-- View Tickets
-- Search Tickets
-- Change Ticket Priority
-- Update Ticket Status
-- Add Resolution
-- Close Ticket
-- View Ticket History
+* Add Support Agent
+* View Support Agents
+* Search Support Agent
+* Update Support Agent
+* Remove Support Agent
+* Validate agent details
+* Prevent duplicate agent email addresses
+* Track agent specialization
+* Track agent availability
 
-### Automatic Ticket Assignment
+### 4.3 Ticket Management
 
-When a ticket is created, the system automatically assigns it to an available support agent based on the ticket category and agent specialization.
+The system provides the following ticket operations:
 
-If no matching specialist is available, the system assigns another available agent.
+1. Create Ticket
+2. View Tickets
+3. Search Ticket
+4. Change Priority
+5. Update Status
+6. Add Resolution
+7. Close Ticket
+8. View Ticket History
+9. Generate Reports
 
-If no agent is available, the ticket is marked as **Not Assigned**.
+Each ticket contains:
 
-### Reports
+* Ticket ID
+* Customer ID
+* Subject
+* Description
+* Category
+* Priority
+* Assigned Person
+* Status
+* Created Date
+* Closed Date
+* Resolution
+* Comment
+* History
+* Last Updated Date
 
-The system provides:
+### 4.4 Automatic Ticket Assignment
 
-- Open Tickets
-- Closed Tickets
-- High-Priority Tickets
-- Tickets by Category
-- Tickets by Assigned Person
-- Ticket Summary
+Tickets are automatically assigned to support agents.
+
+The assignment process is:
+
+1. The system checks the ticket category.
+2. It searches for an available agent with the matching specialization.
+3. If a matching specialist is unavailable, the system selects another available agent.
+4. If no agent is available, the ticket remains `"Not Assigned"`.
+5. The assignment is recorded in the ticket history.
+
+### 4.5 Ticket Priority
+
+The system supports the following priority levels:
+
+* Low
+* Medium
+* High
+* Critical
+
+### 4.6 Ticket Status
+
+Tickets can have the following statuses:
+
+* Open
+* In Progress
+* Resolved
+* Closed
+
+Closed tickets cannot be modified as active tickets.
+
+### 4.7 Ticket History
+
+The system maintains a history of important ticket activities, including:
+
+* Ticket creation
+* Automatic assignment
+* Priority changes
+* Status changes
+* Resolution additions
+* Ticket closure
+
+### 4.8 Reports
+
+The system provides reports for:
+
+* Open tickets
+* Closed tickets
+* High-priority tickets
+* Tickets by category
+* Tickets assigned to a support person
+* Overall ticket summary
+
+The summary includes:
+
+* Total tickets
+* Open tickets
+* In Progress tickets
+* Resolved tickets
+* Closed tickets
+* Low-priority tickets
+* Medium-priority tickets
+* High-priority tickets
+* Critical-priority tickets
 
 ---
 
 ## 5. Technologies Used
 
-- **Programming Language:** Python
-- **Data Storage:** JSON
-- **Development Environment:** Visual Studio Code
-- **Version Control:** Git and GitHub
-
-No external database is required.
+| Technology | Purpose                      |
+| ---------- | ---------------------------- |
+| Python     | Application development      |
+| JSON       | Data storage and persistence |
+| VS Code    | Development environment      |
+| Git        | Version control              |
+| GitHub     | Repository and collaboration |
 
 ---
 
 ## 6. Python Concepts Used
 
-The project demonstrates the following Python concepts:
+This project demonstrates several core Python concepts:
 
-- Variables and data types
-- Conditional statements
-- Loops
-- Functions
-- Lists and dictionaries
-- Classes and objects
-- Object-Oriented Programming
-- Modules and imports
-- File handling
-- JSON handling
-- Exception handling
-- Regular expressions
-- Input validation
-- String operations
-- Date and time handling
+### Variables and Data Types
+
+Used to store customer, agent, and ticket information.
+
+### Conditional Statements
+
+Used for validation and business-rule decisions.
+
+### Loops
+
+Used for searching, displaying, filtering, and processing records.
+
+### Lists and Dictionaries
+
+Used to store and manage collections of customers, agents, and tickets.
+
+### Functions
+
+Used to divide the application into reusable operations.
+
+### Classes and Objects
+
+Used to represent:
+
+* Customer
+* Ticket
+* Support Agent
+
+### Object-Oriented Programming
+
+The project uses classes, objects, attributes, and methods to organize application data and functionality.
+
+### File Handling
+
+JSON files are used to permanently store application data.
+
+### Exception Handling
+
+`try`, `except`, and related exception-handling mechanisms are used to safely handle file and runtime errors.
+
+### Regular Expressions
+
+Regular expressions are used for validating:
+
+* Email addresses
+* Mobile numbers
+* Other required input formats
+
+### Date and Time
+
+Python's `datetime` functionality is used to record:
+
+* Ticket creation date
+* Last updated date
+* Ticket closing date
+* History timestamps
 
 ---
 
 ## 7. Project Structure
 
 ```text
-Customer_support_ticket_managment_system
+Customer_support_ticket_managment_system/
 │
 ├── main.py
 ├── README.md
+├── .gitignore
 │
-├── data
+├── data/
 │   ├── agents.json
 │   ├── customers.json
 │   ├── support_agents.json
 │   └── tickets.json
 │
-├── modules
+├── modules/
 │   ├── __init__.py
 │   ├── customer.py
 │   ├── ticket.py
 │   └── support_agent.py
 │
-└── tests
+└── tests/
     └── test_cases.md
-File Description
-main.py – Main application containing menus, functions, validation, business logic, and program flow.
-customer.py – Contains the Customer class.
-ticket.py – Contains the Ticket class.
-support_agent.py – Contains the SupportAgent class.
-customers.json – Stores customer information.
-support_agents.json – Stores support agent information.
-tickets.json – Stores ticket information.
-test_cases.md – Contains project testing documentation.
-README.md – Contains project documentation.
+```
 
+### File Description
 
+**main.py**
 
- 8. Module Description
-Customer Module
+Contains the main application logic, menus, validations, ticket operations, reports, file handling, and integration of all modules.
 
-The Customer module manages customer information.
+**modules/customer.py**
 
-Each customer contains:
+Contains the `Customer` class and customer-related object methods.
 
-Customer ID
-Name
-Email
-Mobile Number
+**modules/ticket.py**
 
-The Customer class also provides a to_dict() method to convert customer objects into dictionary format for JSON storage.
+Contains the `Ticket` class and ticket-related object methods.
 
-Ticket Module
+**modules/support_agent.py**
 
-The Ticket module represents support tickets.
+Contains the `SupportAgent` class and support-agent-related object methods.
 
-Each ticket contains:
+**data/customers.json**
 
-Ticket ID
-Customer ID
-Subject
-Description
-Category
-Priority
-Assigned Person
-Status
-Created Date
-Closed Date
-Resolution
-Comment
-History
-Last Updated
-Support Agent Module
+Stores customer information.
 
-The Support Agent module manages support agents.
+**data/support_agents.json**
 
-Each agent contains:
+Stores support-agent information.
 
-Agent ID
-Name
-Email
-Specialization
-Availability
-9. Data Storage
+**data/tickets.json**
 
-The application uses JSON files for persistent data storage.
+Stores ticket information.
 
-The main JSON files are:
+**tests/test_cases.md**
 
-customers.json
-support_agents.json
-tickets.json
+Contains the project's testing scenarios and test results.
 
-Whenever customer, agent, or ticket information is added or updated, the changes are saved to the corresponding JSON file.
+**README.md**
 
-This allows the data to remain available even after restarting the application.
+Contains project documentation, features, design, implementation details, testing information, and usage instructions.
 
-10. Ticket Workflow
+**.gitignore**
 
-The general ticket workflow is:
+Prevents unnecessary files such as Python cache files, virtual environments, and local VS Code settings from being committed.
 
+---
+
+## 8. Module Description
+
+### Customer Module
+
+The Customer module contains the `Customer` class.
+
+#### Attributes
+
+* Customer ID
+* Name
+* Email
+* Mobile
+
+#### Methods
+
+* `to_dict()`
+* `update_details()`
+
+The module is responsible for representing and updating customer information.
+
+### Ticket Module
+
+The Ticket module contains the `Ticket` class.
+
+#### Attributes
+
+* Ticket ID
+* Customer ID
+* Subject
+* Description
+* Category
+* Priority
+* Assigned Person
+* Status
+* Created Date
+* Closed Date
+* Resolution
+* Comment
+* History
+* Last Updated
+
+#### Methods
+
+* `to_dict()`
+* `is_closed()`
+
+The module represents ticket information and provides functionality to check whether a ticket is closed.
+
+### Support Agent Module
+
+The Support Agent module contains the `SupportAgent` class.
+
+#### Attributes
+
+* Agent ID
+* Name
+* Email
+* Specialization
+* Availability
+
+#### Methods
+
+* `to_dict()`
+* `update_details()`
+
+The module represents support-agent information.
+
+---
+
+## 9. Data Persistence
+
+The application uses JSON files for permanent data storage.
+
+The following files are used:
+
+```text
+data/customers.json
+data/support_agents.json
+data/tickets.json
+```
+
+The system:
+
+1. Loads existing data when the application starts.
+2. Allows users to modify the data.
+3. Saves updated information back to JSON files.
+4. Loads the saved information again when the application is restarted.
+
+This allows customer, agent, and ticket information to persist between application sessions.
+
+---
+
+## 10. Ticket Workflow
+
+The ticket workflow follows these steps:
+
+```text
+Customer
+   ↓
 Create Ticket
-      ↓
-Validate Customer
-      ↓
-Select Category
-      ↓
-Select Priority
-      ↓
-Automatic Assignment
-      ↓
+   ↓
+Validate Customer ID
+   ↓
+Validate Ticket Information
+   ↓
+Automatic Ticket Assignment
+   ↓
 Ticket Created
-      ↓
-Open
-      ↓
-In Progress
-      ↓
-Resolved
-      ↓
+   ↓
+Update Priority / Status
+   ↓
 Add Resolution
+   ↓
+Close Ticket
+   ↓
+Store Closing Date
+   ↓
+Update Ticket History
+```
+
+### Ticket Creation
+
+When a ticket is created, the system:
+
+1. Validates the ticket ID.
+2. Checks whether the ticket ID is unique.
+3. Checks whether the customer exists.
+4. Collects subject and description.
+5. Validates the ticket category.
+6. Sets the ticket priority.
+7. Automatically assigns a support agent.
+8. Sets the initial status to `Open`.
+9. Records the creation date.
+10. Adds the creation event to ticket history.
+11. Saves the ticket to the JSON file.
+
+### Ticket Closure
+
+Before closing a ticket:
+
+1. The ticket must exist.
+2. The ticket must not already be closed.
+3. A resolution must be available.
+4. The status is changed to `Closed`.
+5. The closing date is recorded.
+6. The ticket history is updated.
+7. The updated ticket is saved.
+
+---
+
+## 11. Automatic Assignment Logic
+
+The automatic assignment system matches tickets with support agents.
+
+### Assignment Rules
+
+```text
+Ticket Category
       ↓
-Closed
+Find Available Agent
+      ↓
+Matching Specialization?
+     / \
+   Yes  No
+   ↓     ↓
+Assign  Find Any
+        Available Agent
+             ↓
+       Agent Available?
+          /       \
+        Yes        No
+         ↓         ↓
+      Assign   Not Assigned
+```
 
-Closed tickets cannot be modified as active tickets.
+For example:
 
-A resolution must be provided before a ticket can be closed.
+```text
+Ticket Category: Network
+Agent Specialization: Network
+Agent Availability: Available
 
-11. Automatic Ticket Assignment
+Result:
+Ticket automatically assigned to the Network specialist.
+```
 
-The system automatically assigns a newly created ticket to a suitable support agent.
+The assignment is also stored in the ticket history.
 
-The assignment process is:
+---
 
-The ticket category is checked.
-The system searches for an available agent with a matching specialization.
-If a matching specialist is available, that agent is assigned.
-If no matching specialist is available, another available agent is selected.
-If no support agent is available, the ticket is marked as Not Assigned.
-The assignment is recorded in the ticket history.
+## 12. Validation and Exception Handling
 
-This reduces the need for manual ticket assignment.
+The application contains input validation and exception handling to improve reliability.
 
-12. Validation and Exception Handling
+### Customer Validation
 
-The application validates user input before performing operations.
+The system validates:
 
-Validation Includes
-Customer ID
-Ticket ID
-Support Agent ID
-Customer name
-Agent name
-Email address
-Mobile number
-Ticket subject
-Ticket description
-Category
-Priority
-Status
-Resolution
-Menu choices
-Exception Handling
+* Customer ID
+* Customer name
+* Email address
+* Mobile number
+* Duplicate email
+* Duplicate mobile number
 
-The application handles common file-related exceptions such as:
+### Support Agent Validation
 
-FileNotFoundError
-JSONDecodeError
-OSError
-General exceptions
+The system validates:
 
-The system displays appropriate error messages instead of terminating unexpectedly.
+* Agent ID
+* Agent name
+* Email address
+* Specialization
+* Availability
+* Duplicate email
 
-13. Business Rules
+### Ticket Validation
 
-The project follows the following business rules:
+The system validates:
 
-Customer IDs must be valid.
-Ticket IDs must be unique.
-Tickets must belong to existing customers.
-Ticket priorities must use predefined values.
-Ticket statuses must use predefined values.
-Closed tickets cannot be modified.
-A resolution must be added before closing a ticket.
-Duplicate customer email addresses are not allowed.
-Duplicate customer mobile numbers are not allowed.
-Only available support agents can be automatically assigned.
-Ticket history is recorded when important ticket changes occur.
-14. Reports
+* Ticket ID
+* Customer ID
+* Subject
+* Description
+* Category
+* Priority
+* Status
 
-The system provides several reports to help monitor support activities.
+### File Exception Handling
 
-Available Reports
-Open Tickets
-Closed Tickets
-High-Priority Tickets
-Tickets by Category
-Tickets by Assigned Person
-Ticket Summary
+The system handles common file-related errors such as:
 
-The Ticket Summary provides counts for:
+* File not found
+* Invalid JSON data
+* File access errors
+* Operating system errors
 
-Total Tickets
-Open Tickets
-In Progress Tickets
-Resolved Tickets
-Closed Tickets
-Low Priority
-Medium Priority
-High Priority
-Critical Priority
-15. How to Run the Project
-Step 1: Open the Project
+### Invalid Input Handling
+
+The application prevents invalid menu selections and invalid IDs from terminating the program unexpectedly.
+
+---
+
+## 13. Business Rules
+
+The system follows the following business rules:
+
+1. Ticket IDs must be unique.
+2. A ticket must belong to an existing customer.
+3. Tickets must have a valid priority.
+4. Tickets must have a predefined status.
+5. Closed tickets cannot be modified as active tickets.
+6. A resolution should be recorded before closing a ticket.
+7. Customer email addresses must be unique.
+8. Customer mobile numbers must be unique.
+9. Support-agent email addresses must be unique.
+10. Tickets are automatically assigned based on agent specialization and availability.
+11. Important ticket activities are recorded in ticket history.
+12. Ticket data is stored persistently in JSON files.
+
+---
+
+## 14. Reports
+
+The Reports section provides useful information about the current support workload.
+
+### Available Reports
+
+#### Open Tickets
+
+Displays tickets that are currently open.
+
+#### Closed Tickets
+
+Displays tickets that have been completed and closed.
+
+#### High-Priority Tickets
+
+Displays tickets with high priority.
+
+#### Tickets by Category
+
+Groups tickets according to their category.
+
+#### Tickets by Assigned Person
+
+Displays tickets assigned to each support agent.
+
+#### Ticket Summary
+
+Displays overall ticket statistics.
+
+Example:
+
+```text
+Total Tickets       : 3
+Open Tickets        : 1
+In Progress Tickets : 0
+Resolved Tickets    : 0
+Closed Tickets      : 2
+Low Priority        : 0
+Medium Priority     : 0
+High Priority       : 2
+Critical Priority   : 1
+```
+
+---
+
+## 15. How to Run the Project
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Chahatmuzasim035/Customer_support_ticket_managment_system.git
+```
+
+### Step 2: Open the Project
 
 Open the project folder in Visual Studio Code.
 
-Step 2: Open the Terminal
+### Step 3: Open the Terminal
 
-Open the VS Code terminal and navigate to the project folder.
+In VS Code:
 
-Step 3: Run the Application
+```text
+Terminal → New Terminal
+```
+
+### Step 4: Run the Application
 
 Use:
 
+```bash
 python main.py
-Step 4: Use the Main Menu
+```
+
+### Step 5: Use the Main Menu
 
 The application displays:
 
-===== CUSTOMER SUPPORT TICKET MANAGEMENT SYSTEM =====
+```text
+========================================
+ CUSTOMER SUPPORT TICKET MANAGEMENT SYSTEM
+========================================
 
 1. Customer Management
 2. Support Agent Management
 3. Ticket Management
 4. Exit
+```
 
-Select the required option and follow the instructions displayed by the application.
+Select the required option by entering the corresponding number.
 
-16. Testing
+---
 
-The project was tested for functional requirements, validation, exception handling, persistence, and navigation.
+## 16. Testing
 
-Testing included:
+The project was tested using valid, invalid, and boundary inputs.
 
-Adding valid and invalid customers
-Searching and updating customers
-Adding, updating, searching, and removing support agents
-Creating valid and invalid tickets
-Automatic ticket assignment
-Changing ticket priority
-Updating ticket status
-Adding resolutions
-Closing tickets
-Preventing modification of closed tickets
-Viewing ticket history
-Testing reports
-Testing invalid menu choices
-Testing invalid IDs
-Testing duplicate customer information
-Testing JSON file persistence
-Testing application navigation
-Testing file-related exception handling
+### Customer Management Testing
 
-Detailed test cases are available in:
+Tested:
 
-tests/test_cases.md
-Final Testing Result
+* Add customer
+* View customer
+* Search customer
+* Update customer
+* Invalid customer ID
+* Invalid email
+* Invalid mobile number
+* Duplicate email
+* Duplicate mobile
+* Data persistence
 
-STATUS: PASS
+### Support Agent Management Testing
 
-All major functional requirements, validation tests, exception handling tests, persistence tests, report tests, and navigation tests were successfully completed.
+Tested:
 
-17. Sample Error Handling
+* Add support agent
+* View support agents
+* Search support agent
+* Update support agent
+* Remove support agent
+* Invalid agent ID
+* Invalid email
+* Duplicate email
+* Data persistence
 
-The application provides clear messages for invalid input.
+### Ticket Management Testing
+
+Tested:
+
+* Create ticket
+* View tickets
+* Search ticket
+* Automatic ticket assignment
+* Change priority
+* Update status
+* Add resolution
+* Close ticket
+* View ticket history
+* Invalid ticket ID
+* Closed-ticket restrictions
+* Data persistence
+
+### Reports Testing
+
+Tested:
+
+* Open tickets report
+* Closed tickets report
+* High-priority tickets report
+* Category report
+* Assigned-person report
+* Ticket summary report
+
+### Integration Testing
+
+All three team modules were integrated and tested together.
+
+The final integrated application successfully verified:
+
+* Customer Management
+* Support Agent Management
+* Ticket Management
+* Automatic ticket assignment
+* Ticket reports
+* Ticket history
+* JSON persistence
+* Application restart
+* Menu navigation
+* Input validation
+* Exception handling
+
+### Final Test Result
+
+```text
+Customer Management       : PASS
+Support Agent Management  : PASS
+Ticket Management         : PASS
+Automatic Assignment      : PASS
+Ticket History            : PASS
+Reports                   : PASS
+Validation                : PASS
+Exception Handling        : PASS
+File Persistence          : PASS
+Application Restart       : PASS
+Navigation                : PASS
+```
+
+---
+
+## 17. Sample Error Handling
+
+The application displays appropriate messages for invalid operations.
 
 Examples:
 
-ERROR: Customer not found.
-ERROR: Email already exists.
-ERROR: Mobile number must contain exactly 10 digits.
-ERROR: Invalid priority choice.
-ERROR: Closed tickets cannot be modified.
-ERROR: Ticket cannot be closed. Please add a resolution before closing the ticket.
+```text
+Invalid customer ID.
+```
 
-These validations help prevent incorrect data from being stored.
+```text
+Customer with this email already exists.
+```
 
-18. Future Enhancements
+```text
+Customer with this mobile number already exists.
+```
 
-The project can be enhanced in the future by adding:
+```text
+Invalid ticket ID.
+```
 
-Graphical User Interface
-Database integration
-User authentication
-Role-based access control
-Email notifications
-Advanced analytics
-Ticket response-time tracking
-More detailed dashboards
-Exporting reports to CSV or Excel
-19. Conclusion
+```text
+Ticket is already closed.
+```
 
-The Customer Support Ticket Management System provides a structured way to manage customers, support agents, and support tickets using Python.
+```text
+Resolution is required before closing the ticket.
+```
 
-The project demonstrates practical implementation of:
+```text
+Invalid priority.
+```
 
-Object-Oriented Programming
-Modular programming
-File handling
-JSON data storage
-Input validation
-Exception handling
-Automatic ticket assignment
-Business logic
-Ticket tracking
-Reporting
+```text
+Invalid status.
+```
 
-The system successfully meets the major functional requirements and demonstrates the use of core Python concepts in a practical real-world application.
+```text
+Invalid menu choice.
+```
 
-20. Project Status
+These validations prevent incorrect data from being stored.
 
-Project Status: Completed
+---
 
-The application has been tested for:
+## 18. Future Enhancements
 
-Customer Management
-Support Agent Management
-Ticket Management
-Automatic Ticket Assignment
-Ticket History
-Reports
-Validation
-Exception Handling
-File Persistence
-Navigation
-Final Status
+The current application is a console-based Python system. Possible future enhancements include:
 
-PASS
+* Graphical user interface
+* Web-based interface
+* Database integration
+* User authentication
+* Role-based access control
+* Email notifications
+* Advanced analytics
+* Ticket search filters
+* Agent workload balancing
+* Ticket escalation
+* Service-level agreement tracking
+* Export reports to CSV or PDF
+* Cloud-based deployment
+
+---
+
+## 19. Conclusion
+
+The **Customer Support Ticket Management System** successfully provides a structured way to manage customers, support agents, and support tickets.
+
+The project demonstrates practical use of Python programming concepts including:
+
+* Object-Oriented Programming
+* Functions
+* Lists and dictionaries
+* File handling
+* JSON persistence
+* Regular expressions
+* Date and time handling
+* Exception handling
+* Input validation
+* Business logic
+
+The automatic ticket assignment feature helps connect tickets with available support agents based on specialization and availability.
+
+The project also maintains ticket history and provides reports that help users monitor ticket activity.
+
+Overall, the application demonstrates how Python can be used to develop a complete console-based management system with persistent data, validation, exception handling, and modular design.
+
+---
+
+## 20. Project Status
+
+### Development Status
+
+```text
+Project Status: COMPLETED
+```
+
+### Completed Components
 
 
-## 21. Project Screenshots
-
-The project was tested through the Python console application.
-
-The screenshots demonstrate:
-
-- Main Menu
 - Customer Management
 - Support Agent Management
 - Ticket Management
-- Ticket Reports
-- Validation and Error Handling
+- Automatic Ticket Assignment
+- Ticket Priority Management
+- Ticket Status Management
+- Ticket Resolution
+- Ticket Closure
 - Ticket History
+- Reports
+- Input Validation
+- Exception Handling
+- JSON File Persistence
+- Integration Testing
+- GitHub Version Control
+- Project Documentation
+
+### Final Application
+
+The application was tested after integrating all team members' modules and successfully completed the required functionality and testing scenarios.
+
+---
+
+## 21. Screenshots
+
+### 1. Main Menu
+
+![Main Menu](Screenshots/01_main_menu.png)
+
+### 2. Customer Management
+
+![Customer Management](Screenshots/02_customer_management.png)
+
+### 3. Support Agent Management
+
+![Support Agent Management](Screenshots/03_support_agents.png)
+
+### 4. Ticket Management
+
+![Ticket Management](Screenshots/04_ticket_management.png)
+
+### 5. Ticket Reports
+
+![Ticket Reports](Screenshots/05_ticket_reports.png)
+
+### 6. Validation
+
+![Validation](Screenshots/06_validation.png)
+
+### 7. Ticket History
+
+![Ticket History](Screenshots/07_ticket_history.png)
+
+---
+
+## Team Members
+
+* **Shaik Chahat Muzasim** — Team Lead — Core Ticket Management, Integration & Final Testing
+* **Neelufar** — Customer Management & Customer Validation
+* **Nikitha** — Support Agent Management & Agent Validation
+
+---
+
+## Repository
+
+**GitHub Repository:**
+## Repository
+
+[GitHub Repository](https://github.com/Chahatmuzasim035/Customer_support_ticket_managment_system)
+
+---
+
+**CUSTOMER SUPPORT TICKET MANAGEMENT SYSTEM**
+*Python Console-Based Application*
