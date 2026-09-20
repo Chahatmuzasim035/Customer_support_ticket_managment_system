@@ -1,5 +1,5 @@
 class SupportAgent:
-    def __init__(
+    def _init_(
         self,
         agent_id,
         name,
@@ -21,3 +21,9 @@ class SupportAgent:
             "specialization": self.specialization,
             "availability": self.availability
         }
+
+    def update_details(self, name, email, specialization, availability):
+        self.name = name
+        self.email = email
+        self.specialization = specialization
+        self.availability = availability
