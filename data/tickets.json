@@ -1,0 +1,133 @@
+[
+    {
+        "id": "T001",
+        "customer_id": "C001",
+        "subject": "internet not working",
+        "description": "not working",
+        "category": "Network",
+        "priority": "High",
+        "assigned_person": "Rahul",
+        "status": "Open",
+        "created_date": "2026-09-19 22:36:21",
+        "closed_date": "",
+        "resolution": "Internet connection issue identified and troubleshooting required.",
+        "comment": "",
+        "history": [
+            {
+                "date": "2026-09-19 22:36:21",
+                "action": "Ticket Created",
+                "details": "Ticket created by customer"
+            },
+            {
+                "date": "2026-09-19 22:50:17",
+                "action": "Ticket Assigned",
+                "details": "Ticket assigned to Rahul"
+            },
+            {
+                "date": "2026-09-20 01:52:50",
+                "action": "Resolution Added",
+                "details": "Resolution added to ticket"
+            }
+        ],
+        "last_updated": "2026-09-20 01:52:50"
+    },
+    {
+        "id": "T002",
+        "customer_id": "C001",
+        "subject": "fan",
+        "description": "not working",
+        "category": "Technical",
+        "priority": "Critical",
+        "assigned_person": "Arjun",
+        "status": "Closed",
+        "created_date": "2026-09-20 00:07:45",
+        "closed_date": "2026-09-20 00:24:47",
+        "resolution": "Fan issue identified and replacement recommended.",
+        "comment": "",
+        "history": [
+            {
+                "date": "2026-09-20 00:07:45",
+                "action": "Ticket Created",
+                "details": "Ticket created by customer"
+            },
+            {
+                "date": "2026-09-20 00:07:45",
+                "action": "Ticket Automatically Assigned",
+                "details": "Ticket automatically assigned to Arjun"
+            },
+            {
+                "date": "2026-09-20 00:14:37",
+                "action": "Status Changed",
+                "details": "Status changed from Open to In Progress"
+            },
+            {
+                "date": "2026-09-20 00:20:18",
+                "action": "Resolution Added",
+                "details": "Resolution added to ticket"
+            },
+            {
+                "date": "2026-09-20 00:24:47",
+                "action": "Ticket Closed",
+                "details": "Ticket closed successfully"
+            }
+        ],
+        "last_updated": "2026-09-20 00:24:47"
+    },
+    {
+        "id": "T003",
+        "customer_id": "C001",
+        "subject": "Fan problem",
+        "description": "Fan is not working",
+        "category": "Technical",
+        "priority": "High",
+        "assigned_person": "Arjun",
+        "status": "Closed",
+        "created_date": "2026-09-20 01:32:37",
+        "closed_date": "2026-09-20 01:50:03",
+        "resolution": "FGHJK",
+        "comment": "",
+        "history": [
+            {
+                "date": "2026-09-20 01:32:37",
+                "action": "Ticket Created",
+                "details": "Ticket created successfully"
+            },
+            {
+                "date": "2026-09-20 01:32:37",
+                "action": "Ticket Automatically Assigned",
+                "details": "Ticket automatically assigned to Arjun (A001)"
+            },
+            {
+                "date": "2026-09-20 01:38:55",
+                "action": "Priority Changed",
+                "details": "Priority changed from Medium to High"
+            },
+            {
+                "date": "2026-09-20 01:41:14",
+                "action": "Status Changed",
+                "details": "Status changed from Open to In Progress"
+            },
+            {
+                "date": "2026-09-20 01:44:09",
+                "action": "Status Changed",
+                "details": "Status changed from In Progress to Resolved"
+            },
+            {
+                "date": "2026-09-20 01:47:15",
+                "action": "Resolution Added",
+                "details": "Resolution added to ticket"
+            },
+            {
+                "date": "2026-09-20 01:48:28",
+                "action": "Resolution Added",
+                "details": "Resolution added to ticket"
+            },
+            {
+                "date": "2026-09-20 01:50:03",
+                "action": "Ticket Closed",
+                "details": "Ticket closed successfully"
+            }
+        ],
+        "last_updated": "2026-09-20 01:50:03"
+    }
+]

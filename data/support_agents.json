@@ -1,0 +1,31 @@
+[
+    {
+        "id": "A001",
+        "name": "Arjun",
+        "email": "arjun@support.com",
+        "specialization": "Technical",
+        "availability": "Available"
+    },
+    {
+        "id": "A002",
+        "name": "Priya",
+        "email": "priya@support.com",
+        "specialization": "Billing",
+        "availability": "Available"
+    },
+    {
+        "id": "A003",
+        "name": "Rahul",
+        "email": "rahul@support.com",
+        "specialization": "Network",
+        "availability": "Available"
+    },
+    {
+        "id": "A004",
+        "name": "Neha",
+        "email": "neha@support.com",
+        "specialization": "Software",
+        "availability": "Available"
+    }
+   
+]
