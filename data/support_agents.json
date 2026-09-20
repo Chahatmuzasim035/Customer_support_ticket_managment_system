@@ -1,8 +1,8 @@
 [
     {
         "id": "A001",
-        "name": "Arjun",
-        "email": "arjun@support.com",
+        "name": "Arjuna",
+        "email": "arujuna@gmail.com",
         "specialization": "Technical",
         "availability": "Available"
     },
@@ -27,5 +27,4 @@
         "specialization": "Software",
         "availability": "Available"
     }
-   
 ]
