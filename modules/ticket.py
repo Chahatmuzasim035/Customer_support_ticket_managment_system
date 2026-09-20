@@ -48,3 +48,6 @@ class Ticket:
             "history": self.history,
             "last_updated": self.last_updated
         }
+
+    def is_closed(self):
+        return self.status.lower() == "closed"
