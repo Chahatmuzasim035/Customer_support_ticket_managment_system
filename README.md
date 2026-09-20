@@ -458,3 +458,18 @@ Navigation
 Final Status
 
 PASS
+
+
+## 21. Project Screenshots
+
+The project was tested through the Python console application.
+
+The screenshots demonstrate:
+
+- Main Menu
+- Customer Management
+- Support Agent Management
+- Ticket Management
+- Ticket Reports
+- Validation and Error Handling
+- Ticket History
