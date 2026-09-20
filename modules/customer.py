@@ -12,3 +12,8 @@ class Customer:
             "email": self.email,
             "mobile": self.mobile
         }
+
+    def update_details(self, name, email, mobile):
+        self.name = name
+        self.email = email
+        self.mobile = mobile
