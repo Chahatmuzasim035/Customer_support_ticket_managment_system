@@ -1,9 +1,9 @@
 [
     {
         "id": "C001",
-        "name": "chahat muzasim shaik",
-        "email": "chahatmuzasim@gmail.com",
-        "mobile": "8179064569"
+        "name": "neelufar",
+        "email": "neelu@gmail.com",
+        "mobile": "1122334455"
     },
     {
         "id": "C002",
@@ -16,5 +16,17 @@
         "name": "bubby",
         "email": "bubby2@gmail.com",
         "mobile": "9000000001"
+    },
+    {
+        "id": "C004",
+        "name": "nikitha",
+        "email": "niki@gmail.com",
+        "mobile": "1234456789"
+    },
+    {
+        "id": "C005",
+        "name": "neelufar",
+        "email": "neelufar211@gmail.com",
+        "mobile": "1233456789"
     }
 ]
